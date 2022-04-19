@@ -513,13 +513,14 @@ namespace ImageProcessing
         private void bitPlain_Click(object sender, EventArgs e)
         {
             Bitmap bitmap = (Bitmap)PictureBoxX.Image;
+            bitmap = GreyScale(bitmap);
             ImageFormat imageFormat = bitmap.RawFormat;
 
             for (int i = 0; i < 8; i++)
             {
                 Bitmap newBitmap = GetBitPlaneRed(bitmap, i);
-                
-                
+                bitfrm bitfrm1 = new bitfrm(i.ToString(), newBitmap);
+                bitfrm1.Show();
             }
         }
     }
