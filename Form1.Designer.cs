@@ -61,21 +61,21 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.LaplasianBtn = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.xyl9 = new System.Windows.Forms.TextBox();
+            this.xyl8 = new System.Windows.Forms.TextBox();
+            this.xyl7 = new System.Windows.Forms.TextBox();
+            this.xyl6 = new System.Windows.Forms.TextBox();
+            this.xyl5 = new System.Windows.Forms.TextBox();
+            this.xyl4 = new System.Windows.Forms.TextBox();
+            this.xyl3 = new System.Windows.Forms.TextBox();
+            this.xyl2 = new System.Windows.Forms.TextBox();
+            this.xyl1 = new System.Windows.Forms.TextBox();
             this.avg5Btn = new System.Windows.Forms.Button();
             this.avg7Btn = new System.Windows.Forms.Button();
             this.avg19Btn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Laplasian19xBtn = new System.Windows.Forms.Button();
+            this.Laplasian7xBtn = new System.Windows.Forms.Button();
+            this.Laplasian5xBtn = new System.Windows.Forms.Button();
             this.zapasPicBox = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -457,15 +457,15 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.LaplasianBtn);
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.textBox10);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.textBox16);
-            this.groupBox3.Controls.Add(this.textBox17);
+            this.groupBox3.Controls.Add(this.xyl9);
+            this.groupBox3.Controls.Add(this.xyl8);
+            this.groupBox3.Controls.Add(this.xyl7);
+            this.groupBox3.Controls.Add(this.xyl6);
+            this.groupBox3.Controls.Add(this.xyl5);
+            this.groupBox3.Controls.Add(this.xyl4);
+            this.groupBox3.Controls.Add(this.xyl3);
+            this.groupBox3.Controls.Add(this.xyl2);
+            this.groupBox3.Controls.Add(this.xyl1);
             this.groupBox3.Location = new System.Drawing.Point(922, 28);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(149, 205);
@@ -480,141 +480,142 @@
             this.LaplasianBtn.TabIndex = 19;
             this.LaplasianBtn.Text = "Laplasian";
             this.LaplasianBtn.UseVisualStyleBackColor = true;
+            this.LaplasianBtn.Click += new System.EventHandler(this.LaplasianBtn_Click);
             // 
-            // textBox9
+            // xyl9
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(100, 110);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(40, 40);
-            this.textBox9.TabIndex = 18;
-            this.textBox9.Text = "0";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl9.Location = new System.Drawing.Point(100, 110);
+            this.xyl9.Multiline = true;
+            this.xyl9.Name = "xyl9";
+            this.xyl9.Size = new System.Drawing.Size(40, 40);
+            this.xyl9.TabIndex = 18;
+            this.xyl9.Text = "0";
+            this.xyl9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox10
+            // xyl8
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(54, 110);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(40, 40);
-            this.textBox10.TabIndex = 17;
-            this.textBox10.Text = "1";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl8.Location = new System.Drawing.Point(54, 110);
+            this.xyl8.Multiline = true;
+            this.xyl8.Name = "xyl8";
+            this.xyl8.Size = new System.Drawing.Size(40, 40);
+            this.xyl8.TabIndex = 17;
+            this.xyl8.Text = "1";
+            this.xyl8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox11
+            // xyl7
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(8, 110);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(40, 40);
-            this.textBox11.TabIndex = 16;
-            this.textBox11.Text = "0";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl7.Location = new System.Drawing.Point(8, 110);
+            this.xyl7.Multiline = true;
+            this.xyl7.Name = "xyl7";
+            this.xyl7.Size = new System.Drawing.Size(40, 40);
+            this.xyl7.TabIndex = 16;
+            this.xyl7.Text = "0";
+            this.xyl7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox12
+            // xyl6
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(100, 64);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(40, 40);
-            this.textBox12.TabIndex = 15;
-            this.textBox12.Text = "1";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl6.Location = new System.Drawing.Point(100, 64);
+            this.xyl6.Multiline = true;
+            this.xyl6.Name = "xyl6";
+            this.xyl6.Size = new System.Drawing.Size(40, 40);
+            this.xyl6.TabIndex = 15;
+            this.xyl6.Text = "1";
+            this.xyl6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox13
+            // xyl5
             // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(54, 64);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(40, 40);
-            this.textBox13.TabIndex = 14;
-            this.textBox13.Text = "-4";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl5.Location = new System.Drawing.Point(54, 64);
+            this.xyl5.Multiline = true;
+            this.xyl5.Name = "xyl5";
+            this.xyl5.Size = new System.Drawing.Size(40, 40);
+            this.xyl5.TabIndex = 14;
+            this.xyl5.Text = "-4";
+            this.xyl5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox14
+            // xyl4
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(8, 64);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(40, 40);
-            this.textBox14.TabIndex = 13;
-            this.textBox14.Text = "1";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl4.Location = new System.Drawing.Point(8, 64);
+            this.xyl4.Multiline = true;
+            this.xyl4.Name = "xyl4";
+            this.xyl4.Size = new System.Drawing.Size(40, 40);
+            this.xyl4.TabIndex = 13;
+            this.xyl4.Text = "1";
+            this.xyl4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox15
+            // xyl3
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(100, 18);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(40, 40);
-            this.textBox15.TabIndex = 12;
-            this.textBox15.Text = "0";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl3.Location = new System.Drawing.Point(100, 18);
+            this.xyl3.Multiline = true;
+            this.xyl3.Name = "xyl3";
+            this.xyl3.Size = new System.Drawing.Size(40, 40);
+            this.xyl3.TabIndex = 12;
+            this.xyl3.Text = "0";
+            this.xyl3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox16
+            // xyl2
             // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(54, 18);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(40, 40);
-            this.textBox16.TabIndex = 11;
-            this.textBox16.Text = "1";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl2.Location = new System.Drawing.Point(54, 18);
+            this.xyl2.Multiline = true;
+            this.xyl2.Name = "xyl2";
+            this.xyl2.Size = new System.Drawing.Size(40, 40);
+            this.xyl2.TabIndex = 11;
+            this.xyl2.Text = "1";
+            this.xyl2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox17
+            // xyl1
             // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xyl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(8, 18);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(40, 40);
-            this.textBox17.TabIndex = 10;
-            this.textBox17.Text = "-1";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xyl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xyl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xyl1.Location = new System.Drawing.Point(8, 18);
+            this.xyl1.Multiline = true;
+            this.xyl1.Name = "xyl1";
+            this.xyl1.Size = new System.Drawing.Size(40, 40);
+            this.xyl1.TabIndex = 10;
+            this.xyl1.Text = "0";
+            this.xyl1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // avg5Btn
             // 
@@ -646,32 +647,35 @@
             this.avg19Btn.UseVisualStyleBackColor = true;
             this.avg19Btn.Click += new System.EventHandler(this.avg19Btn_Click);
             // 
-            // button4
+            // Laplasian19xBtn
             // 
-            this.button4.Location = new System.Drawing.Point(922, 333);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 37);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "Laplasian | 19X19";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Laplasian19xBtn.Location = new System.Drawing.Point(922, 333);
+            this.Laplasian19xBtn.Name = "Laplasian19xBtn";
+            this.Laplasian19xBtn.Size = new System.Drawing.Size(149, 37);
+            this.Laplasian19xBtn.TabIndex = 36;
+            this.Laplasian19xBtn.Text = "Laplasian | 19X19";
+            this.Laplasian19xBtn.UseVisualStyleBackColor = true;
+            this.Laplasian19xBtn.Click += new System.EventHandler(this.Laplasian19xBtn_Click);
             // 
-            // button5
+            // Laplasian7xBtn
             // 
-            this.button5.Location = new System.Drawing.Point(922, 288);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 37);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "Laplasian | 7X7";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Laplasian7xBtn.Location = new System.Drawing.Point(922, 288);
+            this.Laplasian7xBtn.Name = "Laplasian7xBtn";
+            this.Laplasian7xBtn.Size = new System.Drawing.Size(149, 37);
+            this.Laplasian7xBtn.TabIndex = 35;
+            this.Laplasian7xBtn.Text = "Laplasian | 7X7";
+            this.Laplasian7xBtn.UseVisualStyleBackColor = true;
+            this.Laplasian7xBtn.Click += new System.EventHandler(this.Laplasian7xBtn_Click);
             // 
-            // button6
+            // Laplasian5xBtn
             // 
-            this.button6.Location = new System.Drawing.Point(922, 245);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 37);
-            this.button6.TabIndex = 34;
-            this.button6.Text = "Laplasian | 5X5";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Laplasian5xBtn.Location = new System.Drawing.Point(922, 245);
+            this.Laplasian5xBtn.Name = "Laplasian5xBtn";
+            this.Laplasian5xBtn.Size = new System.Drawing.Size(149, 37);
+            this.Laplasian5xBtn.TabIndex = 34;
+            this.Laplasian5xBtn.Text = "Laplasian | 5X5";
+            this.Laplasian5xBtn.UseVisualStyleBackColor = true;
+            this.Laplasian5xBtn.Click += new System.EventHandler(this.Laplasian5xBtn_Click);
             // 
             // zapasPicBox
             // 
@@ -789,7 +793,7 @@
             // gsZapaspicbox
             // 
             this.gsZapaspicbox.Image = ((System.Drawing.Image)(resources.GetObject("gsZapaspicbox.Image")));
-            this.gsZapaspicbox.Location = new System.Drawing.Point(80, 419);
+            this.gsZapaspicbox.Location = new System.Drawing.Point(407, 418);
             this.gsZapaspicbox.Name = "gsZapaspicbox";
             this.gsZapaspicbox.Size = new System.Drawing.Size(33, 34);
             this.gsZapaspicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -807,9 +811,9 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.zapasPicBox);
             this.Controls.Add(this.UploadBtn);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.Laplasian19xBtn);
+            this.Controls.Add(this.Laplasian7xBtn);
+            this.Controls.Add(this.Laplasian5xBtn);
             this.Controls.Add(this.avg19Btn);
             this.Controls.Add(this.avg7Btn);
             this.Controls.Add(this.avg5Btn);
@@ -862,21 +866,21 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button LaplasianBtn;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox xyl9;
+        private System.Windows.Forms.TextBox xyl8;
+        private System.Windows.Forms.TextBox xyl7;
+        private System.Windows.Forms.TextBox xyl6;
+        private System.Windows.Forms.TextBox xyl5;
+        private System.Windows.Forms.TextBox xyl4;
+        private System.Windows.Forms.TextBox xyl3;
+        private System.Windows.Forms.TextBox xyl2;
+        private System.Windows.Forms.TextBox xyl1;
         private System.Windows.Forms.Button avg5Btn;
         private System.Windows.Forms.Button avg7Btn;
         private System.Windows.Forms.Button avg19Btn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Laplasian19xBtn;
+        private System.Windows.Forms.Button Laplasian7xBtn;
+        private System.Windows.Forms.Button Laplasian5xBtn;
         private System.Windows.Forms.Button thrshBtn;
         private System.Windows.Forms.TextBox gamaYTextBox;
         private System.Windows.Forms.TextBox gamaCTextBox;

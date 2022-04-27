@@ -314,8 +314,8 @@ namespace ImageProcessing
             for (int i = 1; i <= bitmap.Width - 2; i++)
                 for (int j = 1; j <= bitmap.Height - 2; j++)
                 {
-                    for (int x = i-1; x <= i + 1; x++)
-                        for (int y = j-1; y <= j + 1; y++)
+                    for (int x = i - 1; x <= i + 1; x++)
+                        for (int y = j - 1; y <= j + 1; y++)
                         {
 
                             c = bitmap.GetPixel(x, y);
@@ -334,6 +334,152 @@ namespace ImageProcessing
 
             return res;
         }
+
+        public Bitmap Laplacian(Bitmap bitmap, int[] array)
+        {
+            var image2 = new Bitmap(bitmap);
+            for (int x = 1; x < bitmap.Width - 1; x++)
+            {
+                for (int y = 1; y < bitmap.Height - 1; y++)
+                {
+                    Color color1, color2, color3, color4, color5, color6, color7, color8, color9;
+                    color1 = bitmap.GetPixel(x - 1, y - 1);
+                    color2 = bitmap.GetPixel(x, y - 1);
+                    color3 = bitmap.GetPixel(x + 1, y - 1);
+                    color4 = bitmap.GetPixel(x - 1, y);
+                    color5 = bitmap.GetPixel(x, y);
+                    color6 = bitmap.GetPixel(x + 1, y);
+                    color7 = bitmap.GetPixel(x - 1, y + 1);
+                    color8 = bitmap.GetPixel(x, y + 1);
+                    color9 = bitmap.GetPixel(x + 1, y + 1);
+                    int r = color1.R * array[0]
+                        + color2.R * array[1]
+                        + color3.R * array[2]
+                        + color4.R * array[3]
+                        + color5.R * array[4]
+                        + color6.R * array[5]
+                        + color7.R * array[6]
+                        + color8.R * array[7]
+                        + color9.R * array[8];
+                    int g = color1.G * array[0]
+                        + color2.G * array[1]
+                        + color3.G * array[2]
+                        + color4.G * array[3]
+                        + color5.G * array[4]
+                        + color6.G * array[5]
+                        + color7.G * array[6]
+                        + color8.G * array[7]
+                        + color9.G * array[8];
+                    int b = color1.B * array[0]
+                        + color2.B * array[1]
+                        + color3.B * array[2]
+                        + color4.B * array[3]
+                        + color5.B * array[4]
+                        + color6.B * array[5]
+                        + color7.B * array[6]
+                        + color8.B * array[7]
+                        + color9.B * array[8];
+                    int avg = (r + g + b) / 3;
+                    if (avg > 255) avg = 255;
+                    if (avg < 0) avg = 0;
+                    image2.SetPixel(x, y, Color.FromArgb(avg, avg, avg));
+                }
+            }
+            return image2;
+        }
+
+
+        private Bitmap Laplacian5x(Bitmap bitmap)
+        {
+            Color c;
+            float sum = 0;
+            Bitmap tepm = new Bitmap(bitmap.Width, bitmap.Height);
+            for (int i = 2; i <= bitmap.Width - 3; i++)
+                for (int j = 2; j <= bitmap.Height - 3; j++)
+                {
+                    for (int x = i - 2; x <= i + 2; x++)
+                        for (int y = j - 2; y <= j + 2; y++)
+                        {
+                            c = bitmap.GetPixel(x, y);
+                            if (x == i && y == j)
+                            {
+                                sum = sum + c.R * (-24);
+                            }
+                            else
+                            {
+                                sum = sum + c.R;
+                            }
+                        }
+                    int color = (int)Math.Round(sum / 25);
+                    if (color > 255) color = 255;
+                    if (color < 0) color = 0;
+                    tepm.SetPixel(i + 1, j + 1, Color.FromArgb(color, color, color));
+                    sum = 0;
+                }
+            return tepm;
+        }
+
+        private Bitmap Laplacian7x(Bitmap bitmap)
+        {
+            Color c;
+            float sum = 0;
+            Bitmap tepm = new Bitmap(bitmap.Width, bitmap.Height);
+            for (int i = 3; i <= bitmap.Width - 4; i++)
+                for (int j = 3; j <= bitmap.Height - 4; j++)
+                {
+                    for (int x = i - 3; x <= i + 3; x++)
+                        for (int y = j - 3; y <= j + 3; y++)
+                        {
+                            c = bitmap.GetPixel(x, y);
+                            if (x == i && y == j)
+                            {
+                                sum = sum + c.R * (-48);
+                            }
+                            else
+                            {
+                                sum = sum + c.R;
+                            }
+                        }
+                    int color = (int)Math.Round(sum / 49);
+                    if (color > 255) color = 255;
+                    if (color < 0) color = 0;
+                    tepm.SetPixel(i + 1, j + 1, Color.FromArgb(color, color, color));
+                    sum = 0;
+                }
+            return tepm;
+        }
+
+        private Bitmap Laplacian19x(Bitmap bitmap)
+        {
+            Color c;
+            float sum = 0;
+            Bitmap tepm = new Bitmap(bitmap.Width, bitmap.Height);
+            for (int i = 9; i <= bitmap.Width - 10; i++)
+                for (int j = 9; j <= bitmap.Height - 10; j++)
+                {
+                    for (int x = i - 9; x <= i + 9; x++)
+                        for (int y = j - 9; y <= j + 9; y++)
+                        {
+                            c = bitmap.GetPixel(x, y);
+                            if (x == i && y == j)
+                            {
+                                sum = sum + c.R * (-360);
+                            }
+                            else
+                            {
+                                sum = sum + c.R;
+                            }
+                        }
+                    int color = (int)Math.Round(sum / 361);
+                    if (color > 255) color = 255;
+                    if (color < 0) color = 0;
+                    tepm.SetPixel(i + 1, j + 1, Color.FromArgb(color, color, color));
+                    sum = 0;
+                }
+            return tepm;
+        }
+
+
 
         //>> Upload & Recovery
 
@@ -356,7 +502,8 @@ namespace ImageProcessing
                 string fileName = openFileDialog.FileName;
                 PictureBoxX.ImageLocation = fileName.ToString();
                 zapasPicBox.ImageLocation = fileName.ToString();
-                gsZapaspicbox.Image = GreyScale((Bitmap)PictureBoxX.Image);
+                Bitmap btzapasgrey = GreyScale((Bitmap)zapasPicBox.Image);
+                gsZapaspicbox.Image = btzapasgrey;
             }
         }
 
@@ -519,9 +666,47 @@ namespace ImageProcessing
             for (int i = 0; i < 8; i++)
             {
                 Bitmap newBitmap = GetBitPlaneRed(bitmap, i);
+                newBitmap = GreyScale(newBitmap);
                 bitfrm bitfrm1 = new bitfrm(i.ToString(), newBitmap);
                 bitfrm1.Show();
             }
+        }
+
+        private void LaplasianBtn_Click(object sender, EventArgs e)
+        {
+            int[] x = new int[9];
+            x[0] = Convert.ToInt32(xyl1.Text);
+            x[1] = Convert.ToInt32(xyl2.Text);
+            x[2] = Convert.ToInt32(xyl3.Text);
+            x[3] = Convert.ToInt32(xyl4.Text);
+            x[4] = Convert.ToInt32(xyl5.Text);
+            x[5] = Convert.ToInt32(xyl6.Text);
+            x[6] = Convert.ToInt32(xyl7.Text);
+            x[7] = Convert.ToInt32(xyl8.Text);
+            x[8] = Convert.ToInt32(xyl9.Text);
+            Bitmap bitmap = (Bitmap)PictureBoxX.Image;
+            PictureBoxX.Image = Laplacian(bitmap, x);
+        }
+
+        private void Laplasian5xBtn_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = (Bitmap)PictureBoxX.Image;
+            bitmap = GreyScale(bitmap);
+            PictureBoxX.Image = Laplacian5x(bitmap);
+        }
+
+        private void Laplasian7xBtn_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = (Bitmap)PictureBoxX.Image;
+            bitmap = GreyScale(bitmap);
+            PictureBoxX.Image = Laplacian7x(bitmap);
+        }
+
+        private void Laplasian19xBtn_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = (Bitmap)PictureBoxX.Image;
+            bitmap = GreyScale(bitmap);
+            PictureBoxX.Image = Laplacian19x(bitmap);
         }
     }
 }
