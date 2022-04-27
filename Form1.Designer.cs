@@ -88,6 +88,8 @@
             this.gsGamaBtn = new System.Windows.Forms.Button();
             this.gsNegBtn = new System.Windows.Forms.Button();
             this.gsZapaspicbox = new System.Windows.Forms.PictureBox();
+            this.moneyBtn = new System.Windows.Forms.Button();
+            this.recLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxX)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -801,12 +803,35 @@
             this.gsZapaspicbox.TabStop = false;
             this.gsZapaspicbox.Click += new System.EventHandler(this.gsZapaspicbox_Click);
             // 
+            // moneyBtn
+            // 
+            this.moneyBtn.BackColor = System.Drawing.Color.FloralWhite;
+            this.moneyBtn.Location = new System.Drawing.Point(479, 440);
+            this.moneyBtn.Name = "moneyBtn";
+            this.moneyBtn.Size = new System.Drawing.Size(257, 39);
+            this.moneyBtn.TabIndex = 40;
+            this.moneyBtn.Text = "Money Recognition";
+            this.moneyBtn.UseVisualStyleBackColor = false;
+            this.moneyBtn.Click += new System.EventHandler(this.moneyBtn_Click);
+            // 
+            // recLbl
+            // 
+            this.recLbl.AutoSize = true;
+            this.recLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recLbl.Location = new System.Drawing.Point(742, 448);
+            this.recLbl.Name = "recLbl";
+            this.recLbl.Size = new System.Drawing.Size(112, 20);
+            this.recLbl.TabIndex = 41;
+            this.recLbl.Text = "[Recognation]";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(1103, 478);
+            this.ClientSize = new System.Drawing.Size(1110, 491);
+            this.Controls.Add(this.recLbl);
+            this.Controls.Add(this.moneyBtn);
             this.Controls.Add(this.gsZapaspicbox);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.zapasPicBox);
@@ -840,6 +865,7 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gsZapaspicbox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -904,6 +930,8 @@
         private System.Windows.Forms.Button gsGamaBtn;
         private System.Windows.Forms.Button gsNegBtn;
         private System.Windows.Forms.PictureBox gsZapaspicbox;
+        private System.Windows.Forms.Button moneyBtn;
+        private System.Windows.Forms.Label recLbl;
     }
 }
 

@@ -480,6 +480,58 @@ namespace ImageProcessing
         }
 
 
+        private string MoneyRecognation(Bitmap bitmap)
+        {
+            int height = bitmap.Height;
+            int width = bitmap.Width;
+
+            int area = height * width;
+
+            int sumr = 0;
+            int sumg = 0;
+            int sumb = 0;
+
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    //get pixel value
+                    Color p = bitmap.GetPixel(x, y);
+
+                    //extract ARGB value from p
+                    int r = p.R;
+                    int g = p.G;
+                    int b = p.B;
+
+                    sumr = sumr + r;
+                    sumg = sumg + g;
+                    sumb = sumb + b;
+                }
+            }
+
+            sumr /= area;
+            sumg /= area;
+            sumb /= area;
+
+            //>> مقایسه با هزاری
+            //>> 178 , 203 , 194
+            if (sumg > sumb && sumb > sumr) return "1000";
+
+            //>> مقایسه با 5 هزاری
+            //>> 210 , 193 , 173
+            if (sumr > sumg && sumg > sumb) return "5000";
+
+            //>> مقایسه با 10 هزاری
+            //>> 194 , 208 , 175
+            if (sumg > sumr && sumr > sumb) return "10000";
+
+            //>> مقایسه با 50 هزاری
+            //>> 162 , 161 , 190
+            if (sumb > sumr && sumb > sumg) return "50000";
+
+            return "Unknown!";
+        }
+
 
         //>> Upload & Recovery
 
@@ -530,8 +582,6 @@ namespace ImageProcessing
             Bitmap bitmap = (Bitmap)PictureBoxX.Image;
             PictureBoxX.Image = Thresholding(bitmap, Convert.ToInt16(thrRedText.Text), Convert.ToInt16(thrGreenText.Text), Convert.ToInt16(thrBlueText.Text));
         }
-
-
 
         private void gsGamaBtn_Click(object sender, EventArgs e)
         {
@@ -630,12 +680,10 @@ namespace ImageProcessing
             PictureBoxX.Image = MedianFilter(bitmap);
         }
 
-
         private static int GetBit(byte b, int bitIndex)
         {
             return (b >> bitIndex) & 0x01;
         }
-
 
         private static Bitmap GetBitPlaneRed(Bitmap bitmap, int bitPlaneIndex)
         {
@@ -707,6 +755,13 @@ namespace ImageProcessing
             Bitmap bitmap = (Bitmap)PictureBoxX.Image;
             bitmap = GreyScale(bitmap);
             PictureBoxX.Image = Laplacian19x(bitmap);
+        }
+
+        private void moneyBtn_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = (Bitmap)PictureBoxX.Image;
+            string tashkis = MoneyRecognation(bitmap);
+            recLbl.Text = tashkis;
         }
     }
 }
